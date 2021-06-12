@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MyProject</string>
+    <string name="homeButton">Home</string>
+    <string name="menuButton">menu</string>
+    <string name="aboutButton">about</string>
+    <string name="bagButton">bag</string>
+</resources>
