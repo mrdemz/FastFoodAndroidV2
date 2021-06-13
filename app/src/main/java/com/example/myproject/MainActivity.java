@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         initHomeButton();
         initMenuButton();
+        initAboutButton();
 
 
     }
@@ -67,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void initAboutButton(){
 
-        View icon = findViewById(R.id.homeIcon);
+        View icon = findViewById(R.id.aboutIcon);
 
         icon.setOnClickListener(new View.OnClickListener() {
 
