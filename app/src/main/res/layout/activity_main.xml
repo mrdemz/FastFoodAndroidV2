@@ -8,8 +8,9 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="100dp"
+        android:id="@+id/linearLayout3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:background="#f3bd76"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -18,48 +19,71 @@
 
         <ImageView
             android:id="@+id/homeIcon"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_weight="1"
-            android:contentDescription="@string/homeButton"
-            android:padding="10dp"
+            android:background="#f3bd76"
 
+            android:contentDescription="@string/homeButton"
+            android:cropToPadding="true"
+            android:paddingLeft="17dp"
+            android:paddingTop="2dp"
+            android:paddingRight="17dp"
+            android:paddingBottom="2dp"
+            android:scaleType="fitXY"
             app:srcCompat="@drawable/home_icon" />
 
         <ImageView
             android:id="@+id/menuIcon"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_weight="1"
+            android:adjustViewBounds="false"
             android:contentDescription="@string/menuButton"
-            android:padding="20dp"
-            android:scaleType="fitCenter"
+            android:cropToPadding="false"
+            android:paddingLeft="15dp"
+            android:paddingTop="5dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="5dp"
+            android:scaleType="fitXY"
             app:srcCompat="@drawable/menu_icon" />
 
         <ImageView
             android:id="@+id/aboutIcon"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_weight="1"
+            android:adjustViewBounds="false"
             android:contentDescription="@string/aboutButton"
-            android:padding="20dp"
-            android:scaleType="fitCenter"
+            android:cropToPadding="false"
+            android:paddingLeft="25dp"
+            android:paddingTop="5dp"
+            android:paddingRight="25dp"
+            android:paddingBottom="5dp"
+            android:scaleType="fitXY"
             app:srcCompat="@drawable/about_icon" />
 
         <ImageView
             android:id="@+id/bagIcon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_weight="1"
             android:contentDescription="@string/bagButton"
-            android:padding="10dp"
+            android:cropToPadding="false"
+            android:paddingLeft="20dp"
+            android:paddingTop="5dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="5dp"
+            android:scaleType="fitXY"
+            android:scaleX="1.2"
             app:srcCompat="@drawable/bag_icon" />
 
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="0dp"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         android:background="#f3bd76"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -69,8 +93,14 @@
         <ImageView
             android:id="@+id/layoutLogo"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_weight="1"
+            android:background="#f3bd76"
+            android:paddingLeft="90dp"
+            android:paddingTop="0dp"
+            android:paddingRight="90dp"
+            android:paddingBottom="0dp"
+            android:scaleType="centerCrop"
             app:srcCompat="@drawable/logo"
             tools:ignore="ContentDescription" />
     </LinearLayout>
