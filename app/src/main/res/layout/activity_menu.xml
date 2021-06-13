@@ -23,7 +23,6 @@
             android:layout_weight="1"
             android:contentDescription="@string/homeButton"
             android:padding="10dp"
-
             app:srcCompat="@drawable/home_icon" />
 
         <ImageView
@@ -58,6 +57,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="0dp"
         android:layout_height="100dp"
         android:background="#f3bd76"
@@ -74,5 +74,16 @@
             app:srcCompat="@drawable/logo"
             tools:ignore="ContentDescription" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:text="@string/menuLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
