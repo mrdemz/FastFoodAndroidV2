@@ -8,8 +8,9 @@
     tools:context=".MainActivity">
 
     <LinearLayout
+        android:id="@+id/linearLayout3"
         android:layout_width="409dp"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         android:background="#f3bd76"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -19,17 +20,18 @@
         <ImageView
             android:id="@+id/homeIcon"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:layout_weight="1"
+            android:background="#f3bd76"
             android:contentDescription="@string/homeButton"
-            android:padding="10dp"
 
+            android:padding="10dp"
             app:srcCompat="@drawable/home_icon" />
 
         <ImageView
             android:id="@+id/menuIcon"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:layout_weight="1"
             android:contentDescription="@string/menuButton"
             android:padding="20dp"
@@ -39,7 +41,7 @@
         <ImageView
             android:id="@+id/aboutIcon"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:layout_weight="1"
             android:contentDescription="@string/aboutButton"
             android:padding="20dp"
@@ -49,7 +51,7 @@
         <ImageView
             android:id="@+id/bagIcon"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:layout_weight="1"
             android:contentDescription="@string/bagButton"
             android:padding="10dp"
@@ -60,7 +62,7 @@
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         android:background="#f3bd76"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -70,21 +72,28 @@
         <ImageView
             android:id="@+id/layoutLogo"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:layout_weight="1"
+            android:background="#f3bd76"
             app:srcCompat="@drawable/logo"
             tools:ignore="ContentDescription" />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="176dp"
-        android:layout_marginRight="176dp"
-        android:text="@string/menuLabel"
+    <ScrollView
+        android:id="@+id/content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <LinearLayout
+            android:id="@+id/contents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

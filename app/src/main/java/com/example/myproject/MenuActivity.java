@@ -5,8 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 public class MenuActivity extends AppCompatActivity {
 
@@ -17,6 +20,17 @@ public class MenuActivity extends AppCompatActivity {
         initHomeButton();
         initMenuButton();
         initAboutButton();
+
+        LinearLayout contents = findViewById(R.id.contents);
+        LayoutInflater inflater = LayoutInflater.from(this);
+
+        for (int i = 0;  i < 5; i++){
+            View view = inflater.inflate(R.layout.menu_image, contents, false);
+            ImageView imageView = view.findViewById(R.id.picture);
+            imageView.setImageResource(R.drawable.ic_launcher_background);
+           contents.addView(view);
+
+        }
 
     }
 

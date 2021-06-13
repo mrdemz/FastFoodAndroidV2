@@ -6,6 +6,14 @@
     <string name="bagButton">bag</string>
     <string name="menuLabel">Menu</string>
     <string name="aboutLabel">About</string>
+    <string name="linearConstraint">center</string>
+    <string name="sampleText">
+        The charred, beefy taste of the patty, seasoned simply with
+salt and pepper (always season the meat only after you form the patty)
+The rich, creamy taste of cheese. The sweetness of the hamburger buns.
+    </string>
+    <string name="itemName">Classic Burger</string>
+    <string name="itemPrice">$ 15.00</string>
 
 
 </resources>
