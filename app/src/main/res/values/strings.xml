@@ -14,6 +14,16 @@ The rich, creamy taste of cheese. The sweetness of the hamburger buns.
     </string>
     <string name="itemName">Classic Burger</string>
     <string name="itemPrice">$ 15.00</string>
+    <string name="hideBagButton">Hide Bag</string>
+    <string name="checkOutButton">Check Out</string>
+    <string name="yourBagLabel">YOUR BAG</string>
+    <string name="numOfItemsLabel">0 Items</string>
+    <string name="subTotalLabel">Sub</string>
+    <string name="taxLabel">Tax</string>
+    <string name="totalLabel">Total</string>
+    <string name="subTotalValue">$0.00</string>
+    <string name="taxValue">$0.00</string>
+    <string name="totalValue">$0.00</string>
 
 
 </resources>
