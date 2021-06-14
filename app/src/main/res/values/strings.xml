@@ -12,8 +12,35 @@
 salt and pepper (always season the meat only after you form the patty)
 The rich, creamy taste of cheese. The sweetness of the hamburger buns.
     </string>
+    <string name="zeroDollar">$0.00</string>
+    <string name="oder_summary">Order Summary</string>
+    <string name="subtotal">Subtotal</string>
+    <string name="sales_tax">Sales Tax</string>
+    <string name="total">Total</string>
+    <string name="place_order">Place Your Order</string>
     <string name="itemName">Classic Burger</string>
     <string name="itemPrice">$ 15.00</string>
+    <string name="hideBagButton">Hide Bag</string>
+    <string name="checkOutButton">Check Out</string>
+    <string name="yourBagLabel">YOUR BAG</string>
+    <string name="numOfItemsLabel">0 Items</string>
+    <string name="subTotalLabel">Sub</string>
+    <string name="taxLabel">Tax</string>
+    <string name="totalLabel">Total</string>
+    <string name="subTotalValue">$0.00</string>
+    <string name="taxValue">$0.00</string>
+    <string name="totalValue">$0.00</string>
+    <string name="popUpNumItems">0 items</string>
+    <string name="addString">Would you like to add?</string>
+    <string name="popAddButton">Add to Bag</string>
+    <string name="popCheckOutButton">Check Out</string>
+    <string name="popSubLabel">Sub</string>
+    <string name="popTaxLabel">Tax</string>
+    <string name="popTotalLabel">Total</string>
+    <string name="popSubValue">$0.00</string>
+    <string name="popTaxValue">$0.00</string>
+    <string name="popTotalValue">$0.00</string>
+    <string name="popSampleText">This is a sample text.......</string>
 
 
 </resources>

@@ -109,13 +109,4 @@
         android:layout_margin="5dp"
         android:layout_alignParentRight="true"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/totalTextViewPayment"
-        android:layout_alignParentRight="true"
-        android:id="@+id/checkoutButton"
-        android:text="@string/checkout"
-        android:layout_marginTop="15dp"/>
-
 </LinearLayout>
