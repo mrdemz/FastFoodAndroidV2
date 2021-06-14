@@ -18,8 +18,15 @@ public class MainActivity extends AppCompatActivity {
         initMenuButton();
         initAboutButton();
 
+        Button button = findViewById(R.id.buttonExample);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+            }
+        });
     }
+
 
 
     private void initHomeButton(){
