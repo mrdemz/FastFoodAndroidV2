@@ -90,7 +90,7 @@ public class AboutActivity extends AppCompatActivity {
     }
     private void initBagButton(){
 
-        View icon = findViewById(R.id.homeIcon);
+        View icon = findViewById(R.id.bagIcon);
 
         icon.setOnClickListener(new View.OnClickListener() {
 
