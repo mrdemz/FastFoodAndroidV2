@@ -1,17 +1,24 @@
 package com.example.myproject;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.PopupWindow;
+import android.widget.TextView;
 
 public class MenuActivity extends AppCompatActivity {
+    View[] view = new View[5];
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,16 +29,54 @@ public class MenuActivity extends AppCompatActivity {
         initAboutButton();
         initBagButton();
 
-        LinearLayout contents = findViewById(R.id.contents);
+
+
+
+
+
+        final LinearLayout contents = findViewById(R.id.contents);
         LayoutInflater inflater = LayoutInflater.from(this);
 
-        for (int i = 0;  i < 5; i++){
-            View view = inflater.inflate(R.layout.menu_image, contents, false);
-            ImageView imageView = view.findViewById(R.id.picture);
+        for (int i = 0; i < 5; i++) {
+            view[i] = inflater.inflate(R.layout.menu_image, contents, false);
+
+            ImageView imageView = view[i].findViewById(R.id.picture);
             imageView.setImageResource(R.drawable.ic_launcher_background);
-           contents.addView(view);
+            contents.addView(view[i]);
 
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        for (int i = 0; i < view.length; i++) {
+            view[i].setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(MenuActivity.this, BagPopUp.class);
+
+
+                    startActivity(intent);
+
+                }
+            });
+
+        }
+
+
+
+
 
     }
 
@@ -122,4 +167,6 @@ public class MenuActivity extends AppCompatActivity {
         });
 
     }
+
+
 }

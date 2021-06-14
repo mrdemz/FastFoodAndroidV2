@@ -24,6 +24,17 @@ The rich, creamy taste of cheese. The sweetness of the hamburger buns.
     <string name="subTotalValue">$0.00</string>
     <string name="taxValue">$0.00</string>
     <string name="totalValue">$0.00</string>
+    <string name="popUpNumItems">0 items</string>
+    <string name="addString">Would you like to add?</string>
+    <string name="popAddButton">Add to Bag</string>
+    <string name="popCheckOutButton">Check Out</string>
+    <string name="popSubLabel">Sub</string>
+    <string name="popTaxLabel">Tax</string>
+    <string name="popTotalLabel">Total</string>
+    <string name="popSubValue">$0.00</string>
+    <string name="popTaxValue">$0.00</string>
+    <string name="popTotalValue">$0.00</string>
+    <string name="popSampleText">This is a sample text.......</string>
 
 
 </resources>
