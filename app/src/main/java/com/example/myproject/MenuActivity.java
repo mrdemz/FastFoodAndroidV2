@@ -20,6 +20,7 @@ public class MenuActivity extends AppCompatActivity {
         initHomeButton();
         initMenuButton();
         initAboutButton();
+        initBagButton();
 
         LinearLayout contents = findViewById(R.id.contents);
         LayoutInflater inflater = LayoutInflater.from(this);

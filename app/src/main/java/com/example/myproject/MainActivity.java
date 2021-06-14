@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
         initHomeButton();
         initMenuButton();
         initAboutButton();
+        initBagButton();
 
 
 
