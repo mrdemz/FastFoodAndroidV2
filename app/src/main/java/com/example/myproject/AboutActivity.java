@@ -17,7 +17,7 @@ public class AboutActivity extends AppCompatActivity {
         initHomeButton();
         initMenuButton();
         initAboutButton();
-        initBagButton();
+
 
     }
 
@@ -89,7 +89,7 @@ public class AboutActivity extends AppCompatActivity {
     }
     private void initBagButton(){
 
-        View icon = findViewById(R.id.bagIcon);
+        View icon = findViewById(R.id.homeIcon);
 
         icon.setOnClickListener(new View.OnClickListener() {
 

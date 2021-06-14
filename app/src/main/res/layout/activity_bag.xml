@@ -17,7 +17,7 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:layout_constraintBottom_toTopOf="@+id/constraintLayout3"
+            app:layout_constraintBottom_toTopOf="@+id/amountConstraint"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
@@ -25,7 +25,146 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical" />
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/textView20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/textView23"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/textView24"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/textView25"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/textView26"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/textView27"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/textView28"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/textView29"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/textView30"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/textView31"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/textView32"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/textView33"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/textView34"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+            </LinearLayout>
         </ScrollView>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -44,7 +183,7 @@
                 android:layout_marginStart="36dp"
                 android:layout_marginLeft="36dp"
                 android:layout_marginTop="16dp"
-                android:text="TextView"
+                android:text="@string/yourBagLabel"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -56,7 +195,7 @@
                 android:layout_marginLeft="36dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="20dp"
-                android:text="TextView"
+                android:text="@string/numOfItemsLabel"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -68,7 +207,8 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginRight="16dp"
-                android:text="Button"
+                android:background="#4E598C"
+                android:text="@string/hideBagButton"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -97,7 +237,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="15dp"
-                android:text="Button"
+                android:background="#FCAF58"
+                android:text="@string/checkOutButton"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
@@ -115,7 +256,7 @@
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout3"
+            android:id="@+id/amountConstraint"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:background="#fff"
@@ -131,7 +272,7 @@
                 android:layout_marginLeft="40dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="12dp"
-                android:text="TextView"
+                android:text="@string/subTotalLabel"
                 app:layout_constraintBottom_toTopOf="@+id/textView8"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -143,7 +284,7 @@
                 android:layout_marginStart="40dp"
                 android:layout_marginLeft="40dp"
                 android:layout_marginBottom="16dp"
-                android:text="TextView"
+                android:text="@string/taxLabel"
                 app:layout_constraintBottom_toTopOf="@+id/textView9"
                 app:layout_constraintStart_toStartOf="parent" />
 
@@ -154,7 +295,7 @@
                 android:layout_marginStart="40dp"
                 android:layout_marginLeft="40dp"
                 android:layout_marginBottom="16dp"
-                android:text="TextView"
+                android:text="@string/totalLabel"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
@@ -164,7 +305,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="40dp"
                 android:layout_marginRight="40dp"
-                android:text="TextView"
+                android:text="@string/subTotalValue"
                 app:layout_constraintBaseline_toBaselineOf="@id/textView7"
                 app:layout_constraintEnd_toEndOf="parent" />
 
@@ -174,7 +315,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="40dp"
                 android:layout_marginRight="40dp"
-                android:text="TextView"
+                android:text="@string/taxValue"
                 app:layout_constraintBaseline_toBaselineOf="@id/textView8"
                 app:layout_constraintEnd_toEndOf="parent" />
 
@@ -184,7 +325,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="40dp"
                 android:layout_marginRight="40dp"
-                android:text="TextView"
+                android:text="@string/totalValue"
                 app:layout_constraintBaseline_toBaselineOf="@id/textView9"
                 app:layout_constraintEnd_toEndOf="parent" />
 

@@ -20,7 +20,6 @@ public class MenuActivity extends AppCompatActivity {
         initHomeButton();
         initMenuButton();
         initAboutButton();
-        initBagButton();
 
         LinearLayout contents = findViewById(R.id.contents);
         LayoutInflater inflater = LayoutInflater.from(this);
@@ -103,7 +102,7 @@ public class MenuActivity extends AppCompatActivity {
     }
     private void initBagButton(){
 
-        View icon = findViewById(R.id.bagIcon);
+        View icon = findViewById(R.id.homeIcon);
 
         icon.setOnClickListener(new View.OnClickListener() {
 
