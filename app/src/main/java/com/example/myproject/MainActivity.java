@@ -17,11 +17,7 @@ public class MainActivity extends AppCompatActivity {
         initHomeButton();
         initMenuButton();
         initAboutButton();
-        Intent intent = new Intent(MainActivity.this, MenuActivity.class);
 
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-
-        startActivity(intent);
 
 
         Button button = findViewById(R.id.buttonExample);
