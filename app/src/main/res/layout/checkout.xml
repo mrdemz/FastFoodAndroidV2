@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pic"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:baselineAligned="false"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/cartCardView"
+        android:layout_margin="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher"
+                android:id="@+id/checkoutItemImageView"
+                android:layout_marginRight="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/checkoutItemImageView"
+                android:text="Sample ITEM Name"
+                android:id="@+id/nameItemTextView"
+                android:layout_marginBottom="30dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/checkoutItemImageView"
+                android:layout_below="@+id/nameItemTextView"
+                android:text="@string/zeroDollar"/>
+
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cartCardView"
+        android:text="@string/oder_summary"
+        android:layout_marginTop="10dp"
+        android:id="@+id/summaryTextView"
+        android:layout_margin="5dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/summaryTextView"
+        android:text="@string/subtotal"
+        android:id="@+id/subtotalTextView"
+        android:layout_margin="5dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/subtotalTextView"
+        android:text="@string/sales_tax"
+        android:id="@+id/taxTextView"
+        android:layout_margin="5dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/taxTextView"
+        android:text="@string/total"
+        android:id="@+id/totalTextView"
+        android:layout_margin="5dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/summaryTextView"
+        android:text="@string/zeroDollar"
+        android:id="@+id/subtotalTextViewPayment"
+        android:layout_margin="5dp"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/subtotalTextView"
+        android:text="@string/zeroDollar"
+        android:id="@+id/taxTextViewPayment"
+        android:layout_margin="5dp"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/taxTextView"
+        android:text="@string/zeroDollar"
+        android:id="@+id/totalTextViewPayment"
+        android:layout_margin="5dp"
+        android:layout_alignParentRight="true"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/totalTextViewPayment"
+        android:layout_alignParentRight="true"
+        android:id="@+id/checkoutButton"
+        android:text="@string/checkout"
+        android:layout_marginTop="15dp"/>
+
+</LinearLayout>

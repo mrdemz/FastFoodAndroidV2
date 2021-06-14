@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:padding="12dp">
 
     <LinearLayout
         android:id="@+id/linearLayout3"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#f3bd76"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        android:background="@color/mainColor"
+        android:layout_alignParentBottom="true"
+        >
 
         <ImageView
             android:id="@+id/homeIcon"
@@ -23,7 +22,6 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:background="#f3bd76"
-
             android:contentDescription="@string/homeButton"
             android:cropToPadding="true"
             android:paddingLeft="17dp"
@@ -80,19 +78,16 @@
 
     </LinearLayout>
 
-    <LinearLayout
+    <androidx.cardview.widget.CardView
         android:id="@+id/linearLayout"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#f3bd76"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:background="@color/mainColor"
+        app:cardCornerRadius="10dp">
 
         <ImageView
             android:id="@+id/layoutLogo"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_weight="1"
             android:background="#f3bd76"
@@ -103,6 +98,192 @@
             android:scaleType="centerCrop"
             app:srcCompat="@drawable/logo"
             tools:ignore="ContentDescription" />
-    </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ScrollView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="580dp"
+        android:layout_below="@id/linearLayout"
+        android:id="@+id/mainScrollView">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/homeBurgerImage"
+                android:layout_width="wrap_content"
+                android:layout_height="260dp"
+                android:src="@drawable/burger1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/homeBurgerImage"
+                android:text="Burger of the Day"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/dealText"
+                android:layout_marginBottom="20dp"
+                android:textSize="15dp"/>
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Special Offers"
+               android:layout_below="@+id/dealText"
+               android:textStyle="bold"
+               android:textColor="@color/black"
+               android:textSize="20sp"
+               android:id="@+id/specialText"/>
+
+            <HorizontalScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/specialText">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/specialHomeBurgerImage"
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/burger1"
+                    android:layout_marginRight="10dp"/>
+
+                <TextView
+                    android:id="@+id/specialHomeBurgerText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/specialHomeBurgerImage"
+                    android:text="Home Style Burger"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="5dp"/>
+
+                <ImageView
+                    android:id="@+id/specialHomeBurgerImage2"
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/burger1"
+                    android:layout_toRightOf="@+id/specialHomeBurgerImage"
+                    android:layout_marginRight="10dp"/>
+
+                <TextView
+                    android:id="@+id/specialHomeBurgerText2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/specialHomeBurgerImage2"
+                    android:text="Hawaiian Burger"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="5dp"/>
+
+                    <ImageView
+                        android:id="@+id/specialHomeBurgerImage3"
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/burger1"
+                        android:layout_toRightOf="@+id/specialHomeBurgerImage2"
+                        android:layout_marginRight="10dp"/>
+
+                    <TextView
+                        android:id="@+id/specialHomeBurgerText3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/specialHomeBurgerImage3"
+                        android:text="Chef's Favorite"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="5dp"/>
+
+
+                </RelativeLayout>
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/scrollText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Healthy Burger"
+                android:layout_below="@+id/scrollView"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"/>
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/scrollText">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/healthyHomeBurgerImage"
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/burger1"
+                        android:layout_marginRight="10dp"/>
+
+                    <TextView
+                        android:id="@+id/healthyHomeBurgerText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/healthyHomeBurgerImage"
+                        android:text="Vegie Burger"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="5dp"/>
+
+                    <ImageView
+                        android:id="@+id/healthyHomeBurgerImage2"
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/burger1"
+                        android:layout_toRightOf="@+id/healthyHomeBurgerImage"
+                        android:layout_marginRight="10dp"/>
+
+                    <TextView
+                        android:id="@+id/healthyHomeBurgerText2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/healthyHomeBurgerImage2"
+                        android:text="Fat Free Burger"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="5dp"/>
+
+                    <ImageView
+                        android:id="@+id/healthyHomeBurgerImage3"
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/burger1"
+                        android:layout_toRightOf="@+id/healthyHomeBurgerImage2"
+                        android:layout_marginRight="10dp"/>
+
+                    <TextView
+                        android:id="@+id/healthyHomeBurgerText3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/healthyHomeBurgerImage3"
+                        android:text="Hawaiian Burger"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="5dp"/>
+
+
+                </RelativeLayout>
+
+            </HorizontalScrollView>
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -14,13 +14,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         initHomeButton();
         initMenuButton();
         initAboutButton();
-
-
+        initBagButton();
     }
-
 
     private void initHomeButton(){
 
@@ -89,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
     }
     private void initBagButton(){
 
-        View icon = findViewById(R.id.homeIcon);
+        View icon = findViewById(R.id.bagIcon);
 
         icon.setOnClickListener(new View.OnClickListener() {
 
