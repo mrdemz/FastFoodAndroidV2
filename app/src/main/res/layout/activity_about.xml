@@ -15,7 +15,8 @@
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        >
 
         <ImageView
             android:id="@+id/homeIcon"
@@ -103,6 +104,8 @@
             android:scaleType="centerCrop"
             app:srcCompat="@drawable/logo"
             tools:ignore="ContentDescription" />
+
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
