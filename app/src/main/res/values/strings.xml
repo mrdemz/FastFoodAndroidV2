@@ -41,6 +41,15 @@ The rich, creamy taste of cheese. The sweetness of the hamburger buns.
     <string name="popTaxValue">$0.00</string>
     <string name="popTotalValue">$0.00</string>
     <string name="popSampleText">This is a sample text.......</string>
+    <string name="name">Name</string>
+    <string name="contact">Contact</string>
+    <string name="address">Address</string>
+    <string name="email">Email Address</string>
+    <string name="fastFoodName">Fast-Food</string>
+    <string name="contactInfo">1-800-Fast-Food</string>
+    <string name="streetAddress">9387 Lightwave Ave, San Diego, Ca, 92123</string>
+    <string name="emailAddress">fast@food.com</string>
+
 
 
 </resources>
