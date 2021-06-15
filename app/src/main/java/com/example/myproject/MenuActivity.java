@@ -20,6 +20,7 @@ public class MenuActivity extends AppCompatActivity {
         initHomeButton();
         initMenuButton();
         initAboutButton();
+        initBagButton();
 
         LinearLayout contents = findViewById(R.id.contents);
         LayoutInflater inflater = LayoutInflater.from(this);
@@ -123,7 +124,7 @@ public class MenuActivity extends AppCompatActivity {
     }
     private void initBagButton(){
 
-        View icon = findViewById(R.id.homeIcon);
+        View icon = findViewById(R.id.bagIcon);
 
         icon.setOnClickListener(new View.OnClickListener() {
 
@@ -131,7 +132,7 @@ public class MenuActivity extends AppCompatActivity {
 
             public void onClick(View v) {
 
-                Intent intent = new Intent(MenuActivity.this, MainActivity.class);
+                Intent intent = new Intent(MenuActivity.this, BagActivity.class);
 
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 
