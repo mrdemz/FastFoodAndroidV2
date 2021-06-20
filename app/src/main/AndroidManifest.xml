@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".BagPopUp" android:label="Your Bag" android:theme = "@style/AppTheme.bagPop"></activity>
+        <activity android:name=".BagPopUp" android:label="Your Bag" android:theme = "@style/AppTheme.bagPop"></activity><!--src Code input by: Bell John Demetria-->
         <activity android:name=".BagActivity" />
         <activity android:name=".AboutActivity" />
         <activity android:name=".MenuActivity" />

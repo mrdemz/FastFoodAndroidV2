@@ -3,6 +3,7 @@ package com.example.myproject;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.media.Image;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,9 +11,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-
+//coded by:Bell John Demetria
 public class MenuActivity extends AppCompatActivity {
-    View[] contentview = new View[5];
+    View[] contentview = new View[11];
+
+    String[] uriArray = new String[11];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,14 +28,20 @@ public class MenuActivity extends AppCompatActivity {
         LinearLayout contents = findViewById(R.id.contents);
         LayoutInflater inflater = LayoutInflater.from(this);
 
-        for (int i = 0;  i < 5; i++){
+
+
+        for (int i = 0;  i < 11; i++){
+
+            String uri = "@drawable/item1"+Integer.toString(i+1);
+            int imageResource = getResources().getIdentifier(uri, null, getPackageName());
             contentview[i] = inflater.inflate(R.layout.menu_image, contents, false);
             ImageView imageView = contentview[i].findViewById(R.id.picture);
-            imageView.setImageResource(R.drawable.ic_launcher_background);
+            Drawable res = getResources().getDrawable(imageResource);
+            imageView.setImageDrawable(res);
             contents.addView(contentview[i]);
 
         }
-        for (int i = 0;  i < 5; i++){
+        for (int i = 0;  i < 11; i++){
             View icon = contentview[i];
 
             icon.setOnClickListener(new View.OnClickListener() {

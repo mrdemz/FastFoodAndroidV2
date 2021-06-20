@@ -7,7 +7,7 @@ import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-
+//coded by: Marc Matias and Bell John Demetria
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -18,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
         initMenuButton();
         initAboutButton();
         initBagButton();
+        String uri = "@drawable/item1"+Integer.toString(1+1);
+        System.out.println(uri);
 
 
 

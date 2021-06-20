@@ -7,7 +7,7 @@ import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-
+//coded by: Atilla Varga
 public class AboutActivity extends AppCompatActivity {
 
     @Override

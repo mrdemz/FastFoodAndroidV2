@@ -7,7 +7,7 @@ import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-
+//coded by: Bell John Demetria
 public class BagActivity extends AppCompatActivity {
 
     @Override
