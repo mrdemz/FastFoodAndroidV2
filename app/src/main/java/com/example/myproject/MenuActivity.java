@@ -30,9 +30,9 @@ public class MenuActivity extends AppCompatActivity {
 
 
 
-        for (int i = 0;  i < 11; i++){
-
-            String uri = "@drawable/item1"+Integer.toString(i+1);
+        for (int i = 0;  i < 10; i++){
+            int num = i+1;
+            String uri = "@drawable/item"+Integer.toString(num);
             int imageResource = getResources().getIdentifier(uri, null, getPackageName());
             contentview[i] = inflater.inflate(R.layout.menu_image, contents, false);
             ImageView imageView = contentview[i].findViewById(R.id.picture);
@@ -41,7 +41,7 @@ public class MenuActivity extends AppCompatActivity {
             contents.addView(contentview[i]);
 
         }
-        for (int i = 0;  i < 11; i++){
+        for (int i = 0;  i < 10; i++){
             View icon = contentview[i];
 
             icon.setOnClickListener(new View.OnClickListener() {

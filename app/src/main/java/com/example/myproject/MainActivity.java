@@ -18,8 +18,7 @@ public class MainActivity extends AppCompatActivity {
         initMenuButton();
         initAboutButton();
         initBagButton();
-        String uri = "@drawable/item1"+Integer.toString(1+1);
-        System.out.println(uri);
+
 
 
 
@@ -71,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 
                 startActivity(intent);
+
 
             }
 
