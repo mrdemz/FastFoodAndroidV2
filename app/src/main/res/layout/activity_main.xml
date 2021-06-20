@@ -124,7 +124,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/homeBurgerImage"
-                android:text="Burger of the Day"
+                android:text="Chef's Special of the Day"
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:layout_centerHorizontal="true"
@@ -157,7 +157,7 @@
                     android:id="@+id/specialHomeBurgerImage"
                     android:layout_width="150dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/burger1"
+                    android:src="@drawable/item1"
                     android:layout_marginRight="10dp"/>
 
                 <TextView
@@ -173,7 +173,7 @@
                     android:id="@+id/specialHomeBurgerImage2"
                     android:layout_width="150dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/burger1"
+                    android:src="@drawable/item3"
                     android:layout_toRightOf="@+id/specialHomeBurgerImage"
                     android:layout_marginRight="10dp"/>
 
@@ -234,7 +234,7 @@
                         android:id="@+id/healthyHomeBurgerImage"
                         android:layout_width="150dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/burger1"
+                        android:src="@drawable/item4"
                         android:layout_marginRight="10dp"/>
 
                     <TextView
@@ -250,7 +250,7 @@
                         android:id="@+id/healthyHomeBurgerImage2"
                         android:layout_width="150dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/burger1"
+                        android:src="@drawable/item5"
                         android:layout_toRightOf="@+id/healthyHomeBurgerImage"
                         android:layout_marginRight="10dp"/>
 
@@ -267,7 +267,7 @@
                         android:id="@+id/healthyHomeBurgerImage3"
                         android:layout_width="150dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/burger1"
+                        android:src="@drawable/item6"
                         android:layout_toRightOf="@+id/healthyHomeBurgerImage2"
                         android:layout_marginRight="10dp"/>
 
@@ -284,13 +284,6 @@
                 </RelativeLayout>
 
             </HorizontalScrollView>
-
-            <Button
-                android:id="@+id/buttonExample"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/healthyScrollView"
-                android:text="Checkout"/>
 
         </RelativeLayout>
 

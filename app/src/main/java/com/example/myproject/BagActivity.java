@@ -18,7 +18,7 @@ public class BagActivity extends AppCompatActivity {
         initMenuButton();
         initAboutButton();
         initBagButton();
-
+        checkout();
 
     }
 
@@ -106,6 +106,14 @@ public class BagActivity extends AppCompatActivity {
 
             }
 
+        });
+
+    }
+    private void checkout(){
+        Button checkoutButton = findViewById(R.id.checkoutButton);
+        checkoutButton.setOnClickListener(v -> {
+            Intent intent = new Intent(BagActivity.this, CheckoutActivity.class);
+            startActivity(intent);
         });
 
     }
