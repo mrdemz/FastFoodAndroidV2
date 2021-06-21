@@ -13,9 +13,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 //coded by:Bell John Demetria
 public class MenuActivity extends AppCompatActivity {
-    View[] contentview = new View[11];
+    View[] contentview = new View[10];
+    String[] itemName = new String[10];
 
-    String[] uriArray = new String[11];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
