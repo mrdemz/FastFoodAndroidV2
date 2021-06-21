@@ -135,7 +135,7 @@
            <TextView
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-               android:text="Special Offers"
+               android:text="Burgers"
                android:layout_below="@+id/dealText"
                android:textStyle="bold"
                android:textColor="@color/black"
@@ -212,7 +212,7 @@
                 android:id="@+id/scrollText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Healthy Burger"
+                android:text="Pasta"
                 android:layout_below="@+id/scrollView"
                 android:textStyle="bold"
                 android:textColor="@color/black"
@@ -226,6 +226,7 @@
                 android:layout_below="@+id/scrollText">
 
                 <RelativeLayout
+                    android:id="@+id/pastaLayout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="10dp">
@@ -242,8 +243,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignLeft="@+id/healthyHomeBurgerImage"
-                        android:text="Vegie Burger"
-                        android:textColor="@color/white"
+                        android:text="Italian Spaghetti"
+                        android:textColor="@color/black"
                         android:layout_marginLeft="5dp"/>
 
                     <ImageView
@@ -259,8 +260,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignLeft="@+id/healthyHomeBurgerImage2"
-                        android:text="Fat Free Burger"
-                        android:textColor="@color/white"
+                        android:text="Creamy Carbonara"
+                        android:textColor="@color/black"
                         android:layout_marginLeft="5dp"/>
 
                     <ImageView
@@ -276,7 +277,84 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignLeft="@+id/healthyHomeBurgerImage3"
-                        android:text="Hawaiian Burger"
+                        android:text="Charlie Chan"
+                        android:textColor="@color/black"
+                        android:layout_marginLeft="5dp"/>
+
+
+                </RelativeLayout>
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/scrollText3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pizza"
+                android:layout_below="@+id/healthyScrollView"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"/>
+
+            <HorizontalScrollView
+                android:id="@+id/pizzaScrollView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/scrollText3">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/pizzaImage"
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/item9"
+                        android:layout_marginRight="10dp"/>
+
+                    <TextView
+                        android:id="@+id/pizzaText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/pizzaImage"
+                        android:text="Hawaiian Pizza"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="5dp"/>
+
+                    <ImageView
+                        android:id="@+id/pizzaImage2"
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/item10"
+                        android:layout_toRightOf="@+id/pizzaImage"
+                        android:layout_marginRight="10dp"/>
+
+                    <TextView
+                        android:id="@+id/pizzaText2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/pizzaImage2"
+                        android:text="Pepperoni Pizza"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="5dp"/>
+
+                    <ImageView
+                        android:id="@+id/pizzaImage3"
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/item8"
+                        android:layout_toRightOf="@+id/pizzaImage2"
+                        android:layout_marginRight="10dp"/>
+
+                    <TextView
+                        android:id="@+id/pizzaText3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/pizzaImage3"
+                        android:text="Vegetarian Pizza"
                         android:textColor="@color/white"
                         android:layout_marginLeft="5dp"/>
 

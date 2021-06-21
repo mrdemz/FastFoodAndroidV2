@@ -4,12 +4,12 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-public class aboutDBHelper extends SQLiteOpenHelper { // a subclass of SQLiteOpenHelper
-    private static final String DATABASE_NAME = "fast_food.db"; //a static varialbe to name the db
-    private static final int DATABASE_VERSION = 1; //a variable to hold the version number
+public class aboutDBHelper extends SQLiteOpenHelper {
+    private static final String DATABASE_NAME = "fast_food.db";
+    private static final int DATABASE_VERSION = 1;
 
     //Database creation sql statement
-    private static final String CREATE_TABLE_fast_food = //a string variable for query
+    private static final String CREATE_TABLE_fastfood_table =
             "create table vaccine (fas_id integer primary key autoincrement, "
                     + "fas_name text not null, "
                     + "contact text, "
@@ -22,7 +22,7 @@ public class aboutDBHelper extends SQLiteOpenHelper { // a subclass of SQLiteOpe
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(CREATE_TABLE_fast_food);
+        db.execSQL(CREATE_TABLE_fastfood_table);
     } //method to create
 
     @Override
