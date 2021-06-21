@@ -116,13 +116,32 @@
             android:padding="10dp">
 
             <TextView
+                android:id="@+id/paymentInformation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Customer Information"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/black"/>
+            <EditText
+                android:id="@+id/checkoutFname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="First Name"
+                android:layout_below="@+id/paymentInformation"/>
+            <TextView
                 android:id="@+id/checkout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:textSize="20sp"
-                android:text="Checkout"/>
+                android:text="Checkout"
+                android:layout_below="@+id/paymentInformation"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
 
             <TextView
                 android:id="@+id/checkout2"
