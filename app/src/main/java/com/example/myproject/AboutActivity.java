@@ -10,6 +10,9 @@ import android.widget.Button;
 //coded by: Atilla Varga
 public class AboutActivity extends AppCompatActivity {
 
+    private fastfood_table currentfastfood_table;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,7 +21,7 @@ public class AboutActivity extends AppCompatActivity {
         initMenuButton();
         initAboutButton();
         initBagButton();
-
+        currentfastfood_table = new fastfood_table();
 
     }
 
