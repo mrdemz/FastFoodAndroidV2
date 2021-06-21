@@ -238,7 +238,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/popUpBagButton"
             android:layout_width="265dp"
             android:layout_height="50dp"
             android:layout_marginBottom="16dp"
@@ -257,7 +257,7 @@
             android:background="#FCAF58"
             android:text="@string/popAddButton"
             android:textColor="#fff"
-            app:layout_constraintBottom_toTopOf="@+id/button5"
+            app:layout_constraintBottom_toTopOf="@+id/popUpBagButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.516"
             app:layout_constraintStart_toStartOf="parent" />

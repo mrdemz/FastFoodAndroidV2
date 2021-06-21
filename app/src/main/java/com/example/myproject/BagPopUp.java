@@ -32,5 +32,15 @@ public class BagPopUp extends AppCompatActivity {
         params.y=-20;
 
         getWindow().setAttributes(params);
+        checkout();
+    }
+
+    private void checkout(){
+        Button checkoutButton = findViewById(R.id.popUpBagButton);
+        checkoutButton.setOnClickListener(v -> {
+            Intent intent = new Intent(BagPopUp.this, CheckoutActivity.class);
+            startActivity(intent);
+        });
+
     }
 }
