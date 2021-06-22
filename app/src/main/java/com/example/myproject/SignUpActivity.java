@@ -9,33 +9,43 @@ import android.view.Gravity;
 import android.view.WindowManager;
 import android.widget.Button;
 
-public class InformationActivity extends AppCompatActivity {
+public class SignUpActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_information);
+        setContentView(R.layout.activity_sign_up);
 
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
         int width = dm.widthPixels;
         int height = dm.heightPixels;
 
-        getWindow().setLayout((int)(width*.7),(int)(height*.7));
+        getWindow().setLayout((int)(width*.8),(int)(height*.8));
         WindowManager.LayoutParams params = getWindow().getAttributes();
         params.gravity = Gravity.CENTER;
         params.x = 0;
         params.y=-20;
 
         getWindow().setAttributes(params);
-        reviewOrder();
+        signUp();
+        logIn();
     }
 
-    public void reviewOrder(){
-        Button reviewButton = findViewById(R.id.reviewButton);
-        reviewButton.setOnClickListener(v -> {
-            Intent intent = new Intent(InformationActivity.this, CheckoutActivity.class);
+    public void signUp(){
+        Button signupButton = findViewById(R.id.signupButton);
+        signupButton.setOnClickListener(v -> {
+            Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
             startActivity(intent);
         });
     }
+
+    public void logIn(){
+        Button loginButton = findViewById(R.id.loginButton);
+        loginButton.setOnClickListener(v -> {
+            Intent intent = new Intent(SignUpActivity.this, LogInActivity.class);
+            startActivity(intent);
+        });
+    }
+
 }

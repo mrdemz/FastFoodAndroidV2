@@ -1,12 +1,15 @@
 package com.example.myproject;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageView;
+
 //coded by: Marc Matias and Bell John Demetria
 public class MainActivity extends AppCompatActivity {
 
@@ -18,10 +21,22 @@ public class MainActivity extends AppCompatActivity {
         initMenuButton();
         initAboutButton();
         initBagButton();
-
-
+        toolBar();
+        loginButton();
     }
 
+    private void toolBar(){
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+    }
+
+    private void loginButton(){
+        ImageView login = findViewById(R.id.loginImageButton);
+        login.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, SignUpActivity.class);
+            startActivity(intent);
+        });
+    }
 
 
     private void initHomeButton(){
