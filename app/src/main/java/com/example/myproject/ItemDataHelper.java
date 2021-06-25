@@ -15,13 +15,37 @@ public class ItemDataHelper extends SQLiteOpenHelper { // a subclass of SQLiteOp
                     + "item_name text not null, "
                     + "price decimal);";
 
+    private static final String CREATE_TABLE_CUSTOMER = //a string variable for query
+            "create table customer_table (_id integer primary key autoincrement, "
+                    + "customer_address text, "
+                    + "customer_name text, "
+                    + "customer_email text, "
+                    + "customer_phone text);";
+    private static final String CREATE_TABLE_ORDER = //a string variable for query
+            "create table order_table (_id integer primary key autoincrement, "
+
+                    + "date text, "
+                    + "item_list text , "
+                    + "total_amount text, "
+                    + "customer_name text, "
+                    + "contact text, "
+                    + "order_type text, "
+                    + "email text, "
+                    + "address text);";
+
+
+
+
+
     public ItemDataHelper(Context context) { // a constructor method to call the superclass constructor
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+        db.execSQL(CREATE_TABLE_CUSTOMER);
         db.execSQL(CREATE_TABLE_SHOW);
+        db.execSQL(CREATE_TABLE_ORDER);
     } //method to create
 
     @Override
@@ -29,6 +53,8 @@ public class ItemDataHelper extends SQLiteOpenHelper { // a subclass of SQLiteOp
         Log.w(ItemDataHelper.class.getName(),
                 "Upgrading database from version " + oldVersion + " to "
                         + newVersion + ", which will destroy all old data");
+        db.execSQL("DROP TABLE IF EXISTS customer_table");
+        db.execSQL("DROP TABLE IF EXISTS order_table");
         db.execSQL("DROP TABLE IF EXISTS item");
         onCreate(db);
     }

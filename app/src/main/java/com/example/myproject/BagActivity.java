@@ -190,9 +190,9 @@ public class BagActivity extends AppCompatActivity {
                     dataSource.open(); //open the database
 
 
-                    wasSuccessful = dataSource.insertVaccine(items);
+                    wasSuccessful = dataSource.insertItem(items);
                     if (wasSuccessful) {
-                        int newId = dataSource.getLastVaccineID();
+                        int newId = dataSource.getLastItemID();
                         items.setItemId(newId);
                         refresh();
                     }

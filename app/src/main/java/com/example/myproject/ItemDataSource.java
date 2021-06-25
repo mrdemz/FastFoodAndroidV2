@@ -7,7 +7,7 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 
 import java.util.ArrayList;
-
+//coded by: Bell John Demetria
 public class ItemDataSource {
     private SQLiteDatabase database; //variables to hold instances of the database
     private ItemDataHelper dbHelper; //variable to ref helper class
@@ -25,7 +25,7 @@ public class ItemDataSource {
     }
 
 
-    public boolean insertVaccine(Item c){
+    public boolean insertItem(Item c){
         boolean didSucceed = false;
         try {
             ContentValues initialValues = new ContentValues();
@@ -40,29 +40,10 @@ public class ItemDataSource {
         return didSucceed;
     }
 
-    public boolean updateVaccine(Item c) {
-        boolean didSucceed = false;
-        try {
-            Long rowId = (long) c.getItemId();
-
-            ContentValues updateValues = new ContentValues();
-            updateValues.put("show_title", c.getItemName());
-            updateValues.put("show_channel", c.getItemPrice());
-            updateValues.put("show_language", c.getItemDesc());
-            updateValues.put("show_genre", c.getFastId());
 
 
-            didSucceed = database.update("show", updateValues, "_id=" + rowId, null) > 0;
 
-
-        }
-        catch (Exception e) {
-
-        }
-        return didSucceed;
-    }
-
-    public int getLastVaccineID(){
+    public int getLastItemID(){
 
         int lastId;
 
@@ -89,20 +70,6 @@ public class ItemDataSource {
     }
 
 
-
-    public Item getSpecificVaccine(int vaccineID) { /*The id for the specific record*/
-        Item item = new Item();
-        String query = "SELECT * FROM item WHERE _id =" + vaccineID; /*.Query has where clause*/
-        Cursor cursor = database.rawQuery(query, null);
-        if (cursor.moveToFirst()) {
-            item.setItemId(cursor.getInt(0));
-            item.setItemName(cursor.getString(1));
-            item.setItemPrice(cursor.getDouble(2));
-
-            cursor.close();
-        }
-        return item;
-    }
 
 
 
@@ -158,6 +125,72 @@ public class ItemDataSource {
         }
         return didDelete;
     }
+
+
+
+
+
+
+
+
+    //For Matias's//Noted by:Bell John Demetria//You can add more methods in this area depending on what you need.
+
+    public boolean insertCustomer(Item c){
+        boolean didSucceed = false;
+        try {
+            ContentValues initialValues = new ContentValues();
+
+            initialValues.put("customer_address", c.getItemName());//put your class method here, make a class(see Item.java for example) noted by: Bell John Demetria
+            initialValues.put("customer_name", c.getItemPrice());//put your class method here, make a class(see Item.java for example)noted by: Bell John Demetria
+            initialValues.put("customer_email", c.getItemPrice());//put your class method here, make a class(see Item.java for example)noted by: Bell John Demetria
+            initialValues.put("customer_phone", c.getItemPrice());//put your class method here, make a class(see Item.java for example)noted by: Bell John Demetria
+
+
+
+            didSucceed = database.insert("customer_table", null, initialValues) > 0;
+        }
+        catch (Exception e) {
+            //Do nothing - will return false if there is no exception
+        }
+        return didSucceed;
+    }
+
+
+
+
+
+
+
+//Matias section ends here// Noted by: Bell John Demetria==========================================================================================================
+
+//For Attila // Noted by:Bell John Demetria// You can add more methods in this area depending on what you need.
+    public boolean insertOrder(Item c){
+        boolean didSucceed = false;
+        try {
+            ContentValues initialValues = new ContentValues();
+
+            initialValues.put("date", c.getItemName()); //put your class method here, make a class(see Item.java for example) noted by: Bell John Demetria
+            initialValues.put("item_list", c.getItemPrice());//put your class method here, make a class(see Item.java for example) noted by: Bell John Demetria
+            initialValues.put("customer_name", c.getItemName());//put your class method here, make a class(see Item.java for example) noted by: Bell John Demetria
+            initialValues.put("contact text", c.getItemPrice());//put your class method here, make a class(see Item.java for example) noted by: Bell John Demetria
+            initialValues.put("order_type", c.getItemName());//put your class method here, make a class(see Item.java for example) noted by: Bell John Demetria
+            initialValues.put("email", c.getItemPrice());//put your class method here, make a class(see Item.java for example) noted by: Bell John Demetria
+            initialValues.put("address", c.getItemName());//put your class method here, make a class(see Item.java for example) noted by: Bell John Demetria
+
+
+            didSucceed = database.insert("order_table", null, initialValues) > 0;
+        }
+        catch (Exception e) {
+            //Do nothing - will return false if there is no exception
+        }
+        return didSucceed;
+    }
+
+
+
+    //Attila's section ends here// Noted by: Bell John Demetria==========================================================================================================
+
+
 
 
 
