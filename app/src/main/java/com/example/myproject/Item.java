@@ -3,7 +3,7 @@ package com.example.myproject;
 public class Item {
     private int itemId;
     private String itemName;
-    private String itemPrice;
+    private double itemPrice;
     private String itemDesc;
     private String fastId;
 
@@ -24,15 +24,15 @@ public class Item {
         return itemName;
     }
 
-    public void setItemName(String showName) {
+    public void setItemName(String itemName) {
         this.itemName = itemName;
     }
 
-    public String getItemPrice() {
+    public double getItemPrice() {
         return itemPrice;
     }
 
-    public void setItemPrice(String itemPrice) {
+    public void setItemPrice(double itemPrice) {
         this.itemPrice = itemPrice;
     }
 

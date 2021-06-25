@@ -101,7 +101,7 @@ public class AboutActivity extends AppCompatActivity {
 
             public void onClick(View v) {
 
-                Intent intent = new Intent(AboutActivity.this, BagActivity.class);
+                Intent intent = new Intent(AboutActivity.this, Bag_Activity.class);
 
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 

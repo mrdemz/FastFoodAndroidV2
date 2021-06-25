@@ -13,9 +13,7 @@ public class ItemDataHelper extends SQLiteOpenHelper { // a subclass of SQLiteOp
     private static final String CREATE_TABLE_SHOW = //a string variable for query
             "create table item (_id integer primary key autoincrement, "
                     + "item_name text not null, "
-                    + "price decimal, "
-                    + "item_desc text,"
-                    + "fas_id int);";
+                    + "price decimal);";
 
     public ItemDataHelper(Context context) { // a constructor method to call the superclass constructor
         super(context, DATABASE_NAME, null, DATABASE_VERSION);

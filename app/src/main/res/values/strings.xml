@@ -7,11 +7,93 @@
     <string name="menuLabel">Menu</string>
     <string name="aboutLabel">About</string>
     <string name="linearConstraint">center</string>
-    <string name="sampleText">
+
+
+    <string-array name="desc_array">
+         <item name="sampleText1">
         The charred, beefy taste of the patty, seasoned simply with
 salt and pepper (always season the meat only after you form the patty)
 The rich, creamy taste of cheese. The sweetness of the hamburger buns.
-    </string>
+    </item>
+        <item name="sampleText2">
+        The charred, beefy taste of the patty, seasoned simply with
+salt,egg,bacon and pepper (always season the meat only after you form the patty)
+The rich, creamy taste of cheese. The sweetness of the hamburger buns.
+    </item>
+        <item name="sampleText3">
+        The charred, triple beefy taste of the patty, seasoned simply with
+salt, bacon, cheese and pepper (always season the meat only after you form the patty)
+The rich, creamy taste of cheese. The sweetness of the hamburger buns.
+    </item>
+        <item name="sampleText4">
+        a classic comfort food with delicious meatballs in a flavorful
+tomato sauce served over spaghetti.
+    </item>
+        <item name="sampleText5">
+        combines a creamy pasta sauce with tender slices of lean protein.
+The white meat is butterflied for quick cooking and seasoned for maximum
+flavor. The heavy cream reduces until a smooth and velvety sauce is able
+to cling to the fettuccine noodles.
+    </item>
+        <item name="sampleText6">
+        Italian pasta dish from Rome made with egg, hard cheese, cured pork,
+and black pepper. ... The cheese is usually Pecorino Romano,
+Parmigiano-Reggiano, or a combination of the two.
+    </item>
+        <item name="sampleText7">
+        spaghetti with Bolognese sauce. It has a distinctively sweet sauce,
+usually made from tomato sauce sweetened with brown sugar or banana
+ketchup. It is typically topped with sliced hot dogs or smoked longganisa
+sausages, giniling (ground meat), and grated cheese.
+    </item>
+        <item name="sampleText8">
+        Dish of Italian origin consisting of a flattened disk of bread dough
+topped with some combination of olive oil, oregano, tomato, olives,
+mozzarella or other cheese, and many other ingredient
+    </item>
+        <item name="sampleText9">
+        Dish of Hawaiian origin consisting of a flattened disk of bread dough
+topped with some combination of olive oil, pineapple, tomato, ham,
+mozzarella or other cheese, and many other ingredient
+    </item>
+        <item name="sampleText10">
+        Dish of Italian origin consisting of a flattened disk of bread dough
+topped with some combination of olive oil, oregano, tomato, olives,
+mozzarella or other cheese, and many other ingredient
+    </item>
+
+
+    </string-array>
+
+
+    <string-array name="name_array">
+        <item>Classic Burger</item>
+        <item>Egg Burger</item>
+        <item>3X Cheese Burger</item>
+        <item>Classic Spaghetti</item>
+        <item>Chicken Alfredo</item>
+        <item>Carbonara</item>
+        <item>Sweet Spaghetti</item>
+        <item>Classic Pizza</item>
+        <item>Hawaiian Pizza</item>
+        <item>Pepperoni Pizza</item>
+    </string-array>
+    <string-array name="price_array">
+        <item>7.98</item>
+        <item>8.00</item>
+        <item>8.00</item>
+        <item>10.98</item>
+        <item>10.98</item>
+        <item>11.98</item>
+        <item>13.98</item>
+        <item>10.98</item>
+        <item>11.98</item>
+        <item>11.98</item>
+
+
+    </string-array>
+
+
     <string name="zeroDollar">$0.00</string>
     <string name="oder_summary">Order Summary</string>
     <string name="subtotal">Subtotal</string>
@@ -49,6 +131,10 @@ The rich, creamy taste of cheese. The sweetness of the hamburger buns.
     <string name="contactInfo">1-800-Fast-Food</string>
     <string name="streetAddress">9387 Lightwave Ave, San Diego, Ca, 92123</string>
     <string name="emailAddress">fast@food.com</string>
+    <string name="emptyText" />
+    <string name="textItemName">TextView</string>
+    <string name="priceTextView">$0.00</string>
+    <string name="delButtonString">Remove</string>
 
 
 </resources>
