@@ -19,6 +19,7 @@ public class CustomerDatabaseHelper extends SQLiteOpenHelper {
     private final String customer_phone = "customer_phone";
     private final String customer_address = "customer_address";
     private final String customer_password = "customer_password";
+    private final String customer_rePassword = "customer_rePassword";
 
 
 
@@ -28,7 +29,7 @@ public class CustomerDatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        final String table = "CREATE TABLE "
+        String table = "CREATE TABLE "
                 +customer_table+ " ("
                 +customer_id+ " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 +customer_fname+ " TEXT NOT NULL, "
@@ -36,6 +37,7 @@ public class CustomerDatabaseHelper extends SQLiteOpenHelper {
                 +customer_phone+ " TEXT NOT NULL, "
                 +customer_address+ " TEXT NOT NULL, "
                 +customer_email+ " TEXT NOT NULL, "
+                +customer_rePassword+ " TEXT NOT NULL, "
                 +customer_password+ " TEXT NOT NULL)";
         db.execSQL(table);
     }
@@ -54,6 +56,7 @@ public class CustomerDatabaseHelper extends SQLiteOpenHelper {
         cv.put(customer_address, customerData.getCustomer_address());
         cv.put(customer_email, customerData.getCustomer_email());
         cv.put(customer_password, customerData.getPassword());
+        cv.put(customer_rePassword, customerData.getRePassword());
 
         long insert = db.insert(customer_table, null, cv);
         if (insert == -1){
@@ -87,14 +90,17 @@ public class CustomerDatabaseHelper extends SQLiteOpenHelper {
             do {
                 int customerID = cursor.getInt(0);
                 String customerFname = cursor.getString(1);
-                String customerLname = cursor.getString(1);
-                String customerPhone = cursor.getString(2);
-                String customerAddress = cursor.getString(3);
-                String customerEmail = cursor.getString(4);
-                String customerPassword = cursor.getString(5);
+                String customerLname = cursor.getString(2);
+                String customerPhone = cursor.getString(3);
+                String customerAddress = cursor.getString(4);
+                String customerEmail = cursor.getString(5);
+                String customerPassword = cursor.getString(6);
+                String customerRePassword = cursor.getString(7);
 
 
-                CustomerData customerData = new CustomerData(customerID, customerFname, customerLname, customerPhone, customerAddress, customerEmail, customerPassword);
+                CustomerData customerData = new CustomerData(customerID, customerFname,
+                        customerLname, customerPhone, customerAddress, customerEmail,
+                        customerPassword, customerRePassword);
                 returnList.add(customerData);
 
             }while(cursor.moveToNext());
@@ -104,5 +110,29 @@ public class CustomerDatabaseHelper extends SQLiteOpenHelper {
         cursor.close();
         db.close();
         return returnList;
+    }
+    public Boolean checkEmail(String email){
+        SQLiteDatabase db = this.getWritableDatabase();
+        //String query = "SELECT * FROM " + customer_table + " WHERE " + customer_email + " = \"" + email + "\"";
+        String query = String.format("SELECT * FROM %s WHERE %s = \"%s\"", customer_table, customer_email, email);
+        Cursor cursor = db.rawQuery(query, null);
+        if (cursor.getCount() > 0) {
+            return true;
+        }else{
+            return false;
+        }
+    }
+    public Boolean checkEmailPassword(String email,String password){
+        SQLiteDatabase db = this.getWritableDatabase();
+        //String query = "SELECT * FROM " + customer_table + " WHERE " + customer_email + " = \""
+                //+ email + "\" and " + customer_email + " = \"" + email + "\"";
+        String query = String.format("SELECT * FROM %s WHERE %s = \"%s\" and %s = \"%s\"",
+                customer_table, customer_email, email, customer_password, password);
+        Cursor cursor = db.rawQuery(query, null);
+        if (cursor.getCount() > 0) {
+            return true;
+        }else{
+            return false;
+        }
     }
 }

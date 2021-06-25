@@ -8,8 +8,13 @@ import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 public class LogInActivity extends AppCompatActivity {
+
+    private EditText emailLogin, passwordLogin;
+    Button logIn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +33,36 @@ public class LogInActivity extends AppCompatActivity {
         params.y=-20;
 
         getWindow().setAttributes(params);
+
+        logIn = findViewById(R.id.buttonForLogin);
+        emailLogin = findViewById(R.id.emailLogin);
+        passwordLogin = findViewById(R.id.passwordLogin);
+
+        login();
     }
+
+    public void login(){
+        CustomerDatabaseHelper db = new CustomerDatabaseHelper(this);
+        logIn.setOnClickListener(v -> {
+            String email = emailLogin.getText().toString();
+            String password = passwordLogin.getText().toString();
+
+            if (emailLogin.equals("") || passwordLogin.equals("")){
+                Toast.makeText(this, "Complete all fields", Toast.LENGTH_SHORT).show();
+            }else{
+                Boolean checkEmailPassword = db.checkEmailPassword(email, password);
+                if (checkEmailPassword){
+                    Toast.makeText(this, "Log in Successful", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(LogInActivity.this, MainActivity.class);
+                    startActivity(intent);
+                }
+                else{
+                    Toast.makeText(this, "Invalid Email or Password", Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
+    }
+
 
 }

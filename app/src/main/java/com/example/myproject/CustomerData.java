@@ -10,10 +10,11 @@ public class CustomerData {
     private String customer_lname;
     private String customer_fullName;
     private String password;
+    private String rePassword;
 
     public CustomerData(int customer_id, String customer_email, String customer_phone,
                         String customer_address, String customer_fname, String customer_lname,
-                        String password) {
+                        String password, String rePassword) {
         this.customer_id = customer_id;
         this.customer_email = customer_email;
         this.customer_phone = customer_phone;
@@ -22,6 +23,7 @@ public class CustomerData {
         this.customer_lname = customer_lname;
         this.customer_fullName = customer_fname + " " + customer_lname;
         this.password = password;
+        this.rePassword = rePassword;
     }
 
     public int getCustomer_id() {
@@ -88,6 +90,14 @@ public class CustomerData {
         this.password = password;
     }
 
+    public String getRePassword() {
+        return rePassword;
+    }
+
+    public void setRePassword(String rePassword) {
+        this.rePassword = rePassword;
+    }
+
     @Override
     public String toString() {
         return "CustomerData{" +
@@ -99,6 +109,7 @@ public class CustomerData {
                 ", customer_lname='" + customer_lname + '\'' +
                 ", customer_fullName='" + customer_fullName + '\'' +
                 ", password='" + password + '\'' +
+                ", rePassword='" + rePassword + '\'' +
                 '}';
     }
 }
