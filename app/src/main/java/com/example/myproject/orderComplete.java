@@ -18,10 +18,6 @@ public class orderComplete extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.order_complete);
 
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.order_complete);
-    }
 
 
 
