@@ -16,13 +16,14 @@ public class orderComplete extends AppCompatActivity {
 
 
     TextView ordernum = findViewById(R.id.orderDisplay);
-    TextView date = findViewById(R.id.dateDisplay);
+    TextView datedis = findViewById(R.id.dateDisplay);
     TextView yourord = findViewById(R.id.yourOrdDisplay);
-    TextView total = findViewById(R.id.totalDisplay);
-    TextView name = findViewById(R.id.nameDisplay);
-    TextView type = findViewById(R.id.typeDisplay);
-    TextView email = findViewById(R.id.emailDisplay);
-    TextView stat = findViewById(R.id.statDisplay);
-    TextView add = findViewById(R.id.pickAddress);
+    TextView totald = findViewById(R.id.totalDisplay);
+    TextView namedis = findViewById(R.id.nameDisplay);
+    TextView typedis = findViewById(R.id.typeDisplay);
+    TextView emaild = findViewById(R.id.emailDisplay);
+    TextView statd = findViewById(R.id.statDisplay);
+    TextView addd = findViewById(R.id.pickAddress);
+
 
 }
