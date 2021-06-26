@@ -49,24 +49,26 @@ public class CheckoutActivity extends AppCompatActivity {
             String zip = checkoutZip.getText().toString();
             String address = String.format("%s %s %s %s", street, city, state, zip);
 
-            try {
-                customerData = new CustomerData(-1, email,
-                        phoneNumber, address, firstName, lastName);
-                Toast.makeText(this, customerData.toString(), Toast.LENGTH_SHORT).show();
-            } catch (Exception e){
-                Toast.makeText(this, "Try Again", Toast.LENGTH_SHORT).show();
-            }
-
-            ItemDataSource db = new ItemDataSource(this);
-
-            boolean insert = db.insertCustomer(customerData);
-            if (insert){
-                Toast.makeText(this, "Thank you for shopping with us, your order has been placed.", Toast.LENGTH_SHORT).show();
+            if (firstName.equals("") || lastName.equals("") || email.equals("") || phoneNumber.equals("")){
+                Toast.makeText(this, "Please fill up the information above.", Toast.LENGTH_SHORT).show();
             }else{
-                Toast.makeText(this, "Something went wrong with your order, please try again.", Toast.LENGTH_SHORT).show();
+                try {
+                    customerData = new CustomerData(-1, email,
+                            phoneNumber, address, firstName, lastName);
+                } catch (Exception e){
+                    Toast.makeText(this, "Try Again", Toast.LENGTH_SHORT).show();
+                }
+                ItemDataSource db = new ItemDataSource(this);
+
+                boolean insert = db.insertCustomer(customerData);
+                if (insert){
+                    Intent intent = new Intent(CheckoutActivity.this, OrderActivity.class);
+                    startActivity(intent);
+                }else{
+                    Toast.makeText(this, "Something went wrong with your order, please try again.", Toast.LENGTH_SHORT).show();
+                }
+
             }
-
-
         });
     }
     private void initHomeButton(){
