@@ -13,6 +13,10 @@ import android.widget.TextView;
 //coded by: Atilla Varga
 
 public class orderComplete extends AppCompatActivity {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.order_complete);
 
 
     TextView ordernum = findViewById(R.id.orderDisplay);
@@ -26,4 +30,6 @@ public class orderComplete extends AppCompatActivity {
     TextView addd = findViewById(R.id.pickAddress);
 
 
-}
+
+
+}}

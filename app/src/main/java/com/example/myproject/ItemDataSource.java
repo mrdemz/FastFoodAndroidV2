@@ -139,12 +139,36 @@ public class ItemDataSource {
 //Matias section ends here// Noted by: Bell John Demetria==========================================================================================================
 
 //For Attila // Noted by:Bell John Demetria// You can add more methods in this area depending on what you need.
+public ArrayList<Double> getDate() {
+    ArrayList<Double>  itemList = new ArrayList<Double>();
+    try {
+        String query = "SELECT * from item";
+        Cursor cursor = database.rawQuery(query, null);
+        double newItem;
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()){
+
+            newItem = cursor.getDouble(2);
+            itemList.add(newItem);
+            cursor.moveToNext();
+        }
+        cursor.close();
+    } catch (Exception exception){
+        itemList = new ArrayList<Double>();
+    }
+    return itemList;
+}
+
     public boolean insertOrder(Item c){
         boolean didSucceed = false;
         try {
+
             ContentValues initialValues = new ContentValues();
 
-            initialValues.put("date", c.getItemName()); //put your class method here, make a class(see Item.java for example) noted by: Bell John Demetria
+
+            initialValues.put("date", c.getItemName());
+
+            //put your class method here, make a class(see Item.java for example) noted by: Bell John Demetria
             initialValues.put("item_list", c.getItemPrice());//put your class method here, make a class(see Item.java for example) noted by: Bell John Demetria
             initialValues.put("customer_name", c.getItemName());//put your class method here, make a class(see Item.java for example) noted by: Bell John Demetria
             initialValues.put("contact text", c.getItemPrice());//put your class method here, make a class(see Item.java for example) noted by: Bell John Demetria
