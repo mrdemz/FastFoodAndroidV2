@@ -9,35 +9,7 @@
     tools:context=".MainActivity"
     android:padding="12dp">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="?attr/colorPrimary"
-            android:minHeight="?attr/actionBarSize">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:text="Welcome"
-                android:textSize="20dp"
-                android:layout_marginRight="250dp"/>
-
-            <ImageView
-                android:id="@+id/loginImageButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_login"
-                />
-
-
-        </androidx.appcompat.widget.Toolbar>
-    </com.google.android.material.appbar.AppBarLayout>
 
 
     <LinearLayout
@@ -111,7 +83,6 @@
     </LinearLayout>
 
     <androidx.cardview.widget.CardView
-        android:layout_below="@+id/appBar"
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

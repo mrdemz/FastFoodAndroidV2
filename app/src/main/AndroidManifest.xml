@@ -10,8 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Bag_Activity"></activity>
-        <activity android:name=".LogInActivity" />
-        <activity android:name=".SignUpActivity" />
         <activity android:name=".CheckoutActivity" />
         <activity
             android:name=".BagPopUp"

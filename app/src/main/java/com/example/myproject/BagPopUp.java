@@ -112,26 +112,7 @@ public class BagPopUp extends AppCompatActivity {
         selectedName = nameArr[index];
         checkout();
         initAddBag();
-
-
-
-
-
-
-
-
-
-
     }
-
-
-
-
-
-
-
-
-
 
     private void checkout() {
         Button checkoutButton = findViewById(R.id.popUpBagButton);
@@ -140,7 +121,6 @@ public class BagPopUp extends AppCompatActivity {
             startActivity(intent);
         });
     }
-
 
     public void refresh()
     {
@@ -152,19 +132,6 @@ public class BagPopUp extends AppCompatActivity {
         overridePendingTransition( 0, 0);
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     private void initAddBag(){
         // declare the widget to use the listener
@@ -182,22 +149,15 @@ public class BagPopUp extends AppCompatActivity {
                 items.setItemName(selectedName);
                 items.setItemPrice(selectedPrice);
 
-
-
-
                 try {
 
                     dataSource.open(); //open the database
-
-
                         wasSuccessful = dataSource.insertItem(items);
                         if (wasSuccessful) {
                             int newId = dataSource.getLastItemID();
                             items.setItemId(newId);
                             refresh();
                         }
-
-
                 } catch (Exception e) {
                     wasSuccessful = false;
                 }
@@ -208,12 +168,5 @@ dataSource.close();
 
         });
     }
-
-
-
-
-
-
-
 
 }

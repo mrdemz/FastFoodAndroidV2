@@ -116,58 +116,86 @@
             android:padding="10dp">
 
             <TextView
-                android:id="@+id/paymentInformation"
+                android:id="@+id/checkoutInformation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Customer Information"
+                android:text="Checkout Information"
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:textColor="@color/black"/>
             <EditText
                 android:id="@+id/checkoutFname"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/text_box"
+                android:drawablePadding="12dp"
+                android:ems="10"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
                 android:hint="First Name"
-                android:layout_below="@+id/paymentInformation"/>
-            <TextView
-                android:id="@+id/checkout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:text="Checkout"
-                android:layout_below="@+id/paymentInformation"/>
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_below="@id/checkoutInformation"/>
             <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:id="@+id/checkoutLname"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/text_box"
+                android:drawablePadding="12dp"
+                android:ems="10"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:hint="Last Name"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_below="@id/checkoutFname"/>
+            <EditText
+                android:id="@+id/checkoutEmail"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/text_box"
+                android:drawablePadding="12dp"
+                android:ems="10"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:hint="Email Address"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_below="@id/checkoutLname"/>
+            <EditText
+                android:id="@+id/checkoutPhone"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/text_box"
+                android:drawablePadding="12dp"
+                android:ems="10"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:hint="Phone Number"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_below="@id/checkoutEmail"/>
 
-
-            <TextView
-                android:id="@+id/checkout2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="# of items"
-                android:layout_below="@id/checkout"
-                android:layout_marginBottom="10dp"/>
-            <ImageButton
-                android:id="@+id/deleteCheckoutButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:src="@drawable/ic_delete"/>
 
 
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cartCardView"
-                android:layout_below="@id/checkout2"
+                android:layout_below="@id/checkoutPhone"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_centerHorizontal="true"
-                android:layout_margin="5dp"
-                app:cardCornerRadius="5dp"
-                app:cardElevation="5dp">
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp"
+                android:layout_marginTop="20dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -175,121 +203,89 @@
                     android:padding="20dp">
 
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@mipmap/ic_launcher"
-                        android:id="@+id/checkoutItemImageView"
-                        android:layout_marginRight="10dp"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_toRightOf="@+id/checkoutItemImageView"
-                        android:text="Sample ITEM Name"
-                        android:id="@+id/nameItemTextView"
-                        android:layout_marginBottom="30dp"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_toRightOf="@+id/checkoutItemImageView"
-                        android:layout_below="@+id/nameItemTextView"
-                        android:text="@string/zeroDollar"/>
+
 
                     <RadioGroup
                         android:id="@+id/radioGroup"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/checkoutItemImageView">
+                        android:layout_marginTop="10dp">
 
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Store Pickup at National City"
+                            android:text="@string/pickupAddress"
                             android:textSize="10sp"/>
 
                         <RadioButton
+                            android:id="@+id/checkoutDelivery"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Free Shipping to National City Area"
+                            android:text="Free Shipping"
                             android:textSize="10sp"/>
                     </RadioGroup>
-
+                    <EditText
+                        android:id="@+id/checkoutStreet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:drawablePadding="12dp"
+                        android:ems="10"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
+                        android:hint="Street Name and No."
+                        android:textSize="14sp"
+                        android:layout_below="@id/radioGroup"/>
+                    <EditText
+                        android:id="@+id/checkoutCity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:drawablePadding="12dp"
+                        android:ems="10"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
+                        android:hint="City"
+                        android:textSize="14sp"
+                        android:layout_below="@id/checkoutStreet"/>
+                    <EditText
+                        android:id="@+id/checkoutState"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:drawablePadding="12dp"
+                        android:ems="10"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
+                        android:hint="State"
+                        android:textSize="14sp"
+                        android:layout_below="@id/checkoutCity"/>
+                    <EditText
+                        android:id="@+id/checkoutZip"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:ems="10"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
+                        android:hint="Zip Code"
+                        android:textSize="14sp"
+                        android:layout_below="@id/checkoutState"/>
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
 
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/cartCardView"
-                android:text="@string/oder_summary"
-                android:layout_marginTop="10dp"
-                android:textColor="@color/black"
-                android:id="@+id/summaryTextView"
-                android:layout_margin="5dp"
-                android:textStyle="bold"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/summaryTextView"
-                android:text="@string/subtotal"
-                android:id="@+id/subtotalTextView"
-                android:layout_margin="5dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/subtotalTextView"
-                android:text="@string/sales_tax"
-                android:id="@+id/taxTextView"
-                android:layout_margin="5dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/taxTextView"
-                android:text="@string/total"
-                android:textStyle="bold"
-                android:id="@+id/totalTextView"
-                android:textSize="18sp"
-                android:textColor="@color/black"
-                android:layout_margin="5dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/summaryTextView"
-                android:text="@string/zeroDollar"
-                android:id="@+id/subtotalTextViewPayment"
-                android:layout_margin="5dp"
-                android:layout_alignParentRight="true"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/subtotalTextView"
-                android:text="@string/zeroDollar"
-                android:id="@+id/taxTextViewPayment"
-                android:layout_margin="5dp"
-                android:layout_alignParentRight="true"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/taxTextView"
-                android:text="@string/zeroDollar"
-                android:id="@+id/totalTextViewPayment"
-                android:layout_margin="5dp"
-                android:layout_alignParentRight="true"/>
 
             <Button
+                android:id="@+id/orderButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Place Your Order"
-                android:layout_below="@+id/totalTextViewPayment"
-                android:layout_alignParentRight="true"/>
+                android:text="Order Details"
+                android:layout_below="@+id/cartCardView"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20dp"/>
 
         </RelativeLayout>
 

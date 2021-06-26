@@ -5,18 +5,69 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.RadioGroup;
+import android.widget.Toast;
 
 public class CheckoutActivity extends AppCompatActivity {
 
+    private CustomerData customerData;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_checkout);
 
+
         initHomeButton();
         initMenuButton();
         initBagButton();
         initAboutButton();
+        placeOrder();
+    }
+    private void  placeOrder(){
+
+        Button button = findViewById(R.id.orderButton);
+        button.setOnClickListener(v -> {
+
+            EditText checkoutFname = findViewById(R.id.checkoutFname);
+            EditText checkoutLname = findViewById(R.id.checkoutLname);
+            EditText checkoutEmail = findViewById(R.id.checkoutEmail);
+            EditText checkoutPhone = findViewById(R.id.checkoutPhone);
+            EditText checkoutStreet = findViewById(R.id.checkoutStreet);
+            EditText checkoutCity = findViewById(R.id.checkoutCity);
+            EditText checkoutState = findViewById(R.id.checkoutState);
+            EditText checkoutZip = findViewById(R.id.checkoutZip);
+
+            String firstName = checkoutFname.getText().toString();
+            String lastName = checkoutLname.getText().toString();
+            String email = checkoutEmail.getText().toString();
+            String phoneNumber = checkoutPhone.getText().toString();
+            String street = checkoutStreet.getText().toString();
+            String city = checkoutCity.getText().toString();
+            String state = checkoutState.getText().toString();
+            String zip = checkoutZip.getText().toString();
+            String address = String.format("%s %s %s %s", street, city, state, zip);
+
+            try {
+                customerData = new CustomerData(-1, email,
+                        phoneNumber, address, firstName, lastName);
+                Toast.makeText(this, customerData.toString(), Toast.LENGTH_SHORT).show();
+            } catch (Exception e){
+                Toast.makeText(this, "Try Again", Toast.LENGTH_SHORT).show();
+            }
+
+            ItemDataSource db = new ItemDataSource(this);
+
+            boolean insert = db.insertCustomer(customerData);
+            if (insert){
+                Toast.makeText(this, "Thank you for shopping with us, your order has been placed.", Toast.LENGTH_SHORT).show();
+            }else{
+                Toast.makeText(this, "Something went wrong with your order, please try again.", Toast.LENGTH_SHORT).show();
+            }
+
+
+        });
     }
     private void initHomeButton(){
 
@@ -94,15 +145,12 @@ public class CheckoutActivity extends AppCompatActivity {
 
             public void onClick(View v) {
 
-                Intent intent = new Intent(CheckoutActivity.this, BagActivity.class);
-
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                Intent intent = new Intent(CheckoutActivity.this, Bag_Activity.class);
 
                 startActivity(intent);
 
             }
 
         });
-
     }
 }

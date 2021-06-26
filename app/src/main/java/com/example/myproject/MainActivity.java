@@ -21,22 +21,9 @@ public class MainActivity extends AppCompatActivity {
         initMenuButton();
         initAboutButton();
         initBagButton();
-        toolBar();
-        loginButton();
+     
     }
 
-    private void toolBar(){
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-    }
-
-    private void loginButton(){
-        ImageView login = findViewById(R.id.loginImageButton);
-        login.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, SignUpActivity.class);
-            startActivity(intent);
-        });
-    }
 
 
     private void initHomeButton(){

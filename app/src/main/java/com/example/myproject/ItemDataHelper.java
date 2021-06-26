@@ -16,11 +16,14 @@ public class ItemDataHelper extends SQLiteOpenHelper { // a subclass of SQLiteOp
                     + "price decimal);";
 
     private static final String CREATE_TABLE_CUSTOMER = //a string variable for query
-            "create table customer_table (_id integer primary key autoincrement, "
-                    + "customer_address text, "
-                    + "customer_name text, "
+            "create table customer_table (id integer primary key autoincrement, "
                     + "customer_email text, "
-                    + "customer_phone text);";
+                    + "customer_phone text, "
+                    + "customer_address text, "
+                    + "customer_fname text, "
+                    + "customer_lname text)";
+
+
     private static final String CREATE_TABLE_ORDER = //a string variable for query
             "create table order_table (_id integer primary key autoincrement, "
 
@@ -32,8 +35,6 @@ public class ItemDataHelper extends SQLiteOpenHelper { // a subclass of SQLiteOp
                     + "order_type text, "
                     + "email text, "
                     + "address text);";
-
-
 
 
 

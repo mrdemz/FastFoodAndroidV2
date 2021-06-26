@@ -13,6 +13,7 @@ public class ItemDataSource {
     private ItemDataHelper dbHelper; //variable to ref helper class
 
     public ItemDataSource(Context context) { //instantiating the helper class
+
         dbHelper = new ItemDataHelper(context);
     }
 
@@ -21,6 +22,7 @@ public class ItemDataSource {
     }
 
     public void close() { //close db
+
         dbHelper.close();
     }
 
@@ -39,9 +41,6 @@ public class ItemDataSource {
         }
         return didSucceed;
     }
-
-
-
 
     public int getLastItemID(){
 
@@ -68,13 +67,6 @@ public class ItemDataSource {
         return lastId;
 
     }
-
-
-
-
-
-
-
     public ArrayList<Item> getItems() {
         ArrayList<Item>  itemList = new ArrayList<Item>();
         try {
@@ -125,42 +117,25 @@ public class ItemDataSource {
         }
         return didDelete;
     }
-
-
-
-
-
-
-
-
     //For Matias's//Noted by:Bell John Demetria//You can add more methods in this area depending on what you need.
 
-    public boolean insertCustomer(Item c){
-        boolean didSucceed = false;
-        try {
-            ContentValues initialValues = new ContentValues();
+    public boolean insertCustomer(CustomerData c){
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        ContentValues cv = new ContentValues();
 
-            initialValues.put("customer_address", c.getItemName());//put your class method here, make a class(see Item.java for example) noted by: Bell John Demetria
-            initialValues.put("customer_name", c.getItemPrice());//put your class method here, make a class(see Item.java for example)noted by: Bell John Demetria
-            initialValues.put("customer_email", c.getItemPrice());//put your class method here, make a class(see Item.java for example)noted by: Bell John Demetria
-            initialValues.put("customer_phone", c.getItemPrice());//put your class method here, make a class(see Item.java for example)noted by: Bell John Demetria
+        cv.put("customer_email", c.getCustomer_email());
+        cv.put("customer_phone", c.getCustomer_phone());
+        cv.put("customer_address", c.getCustomer_address());
+        cv.put("customer_fname", c.getCustomer_fname());
+        cv.put("customer_lname", c.getCustomer_lname());
 
-
-
-            didSucceed = database.insert("customer_table", null, initialValues) > 0;
+        long insert = db.insert("customer_table", null, cv);
+        if (insert == -1){
+            return false;
+        } else{
+            return true;
         }
-        catch (Exception e) {
-            //Do nothing - will return false if there is no exception
-        }
-        return didSucceed;
     }
-
-
-
-
-
-
-
 //Matias section ends here// Noted by: Bell John Demetria==========================================================================================================
 
 //For Attila // Noted by:Bell John Demetria// You can add more methods in this area depending on what you need.
